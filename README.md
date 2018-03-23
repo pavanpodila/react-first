@@ -1,7 +1,7 @@
 # react-first 
 A simple React project to get you off the ground. 🚀🚀🚀
 
-![Launch](https://gph.is/1frHYit)
+![Launch](https://media.giphy.com/media/cEYFeE4wJ6jdDVBiiIM/giphy.gif)
 
 ## Get started
 
