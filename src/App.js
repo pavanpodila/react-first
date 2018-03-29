@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Clock } from './Clock';
-import { Background } from './Background';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { LandingPage } from './pages/LandingPage';
+import { ClockPage } from './pages/ClockPage';
+import { NoMatchPage } from './pages/NoMatchPage';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                {<Header />}
+                <Header />
 
-                <Background image={require('./assets/night-sky.jpg')} />
-                <Clock />
-                <Clock format={'MMM DD, YYYY'} className="display-4" />
+                <BrowserRouter>
+                    <Switch>
+                        <Route
+                            path={'/'}
+                            exact={true}
+                            component={LandingPage}
+                        />
+                        <Route path={'/clock'} component={ClockPage} />
+                        <Route component={NoMatchPage} />
+                    </Switch>
+                </BrowserRouter>
             </div>
         );
     }
