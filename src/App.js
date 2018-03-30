@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Background src={require('./assets/raindrops.jpg')} />
+                <Background src={require('./assets/night-sky.jpg')} />
 
                 <BrowserRouter>
                     <Fragment>
